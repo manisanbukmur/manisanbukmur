@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manisan Buk Mur – Manisan Segar Medan</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=Caveat+Brush&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav" id="nav">
+  <a href="#atas" class="logo"><span>Manisan</span> Buk Mur</a>
+  <button class="burger" id="burger" aria-label="Buka menu" aria-expanded="false"><i></i><i></i></button>
+  <nav id="menuNav">
+    <a href="#menu">Menu</a>
+    <a href="#cara">Cara pesan</a>
+    <a href="#kontak">Lokasi</a>
+  </nav>
+  <button class="cart-btn" id="openCart">Keranjang <b id="cartCount">0</b></button>
+</header>
+
+<main>
+  <section class="hero" id="atas">
+    <div class="hero-text">
+      <p class="script">Asam, manis, pedas — pas.</p>
+      <h1>Manisan <br>Buk Mur</h1>
+      <p class="lead">Manisan buah segar langsung dari Pasar 1, Tanjung Sari, Medan. Dikemas rapi dalam cup, siap dibawa pulang atau dikirim ke rumah.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#menu">Lihat menu</a>
+        <a class="btn ghost" id="waHero" href="#" target="_blank" rel="noopener">Chat WhatsApp</a>
+      </div>
+    </div>
+    <div class="hero-img">
+      <img src="img/logo-manisan.jpeg">
+      <span class="stamp">9 varian</span>
+    </div>
+  </section>
+
+  <section class="menu" id="menu">
+    <div class="sec-head">
+      <h2>Pilih manisanmu</h2>
+      <div class="filters" id="filters">
+        <button class="on" data-f="semua">Semua</button>
+        <button data-f="buah">Buah segar</button>
+        <button data-f="rujak">Rujak</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="steps" id="cara">
+    <h2>Cara pesan</h2>
+    <ol>
+      <li><b>Pilih varian</b> lalu tekan <em>Pesan sekarang</em>.</li>
+      <li><b>Atur jumlah</b> di keranjang, tulis catatan kalau perlu (misal: tanpa cabe).</li>
+      <li><b>Kirim ke WhatsApp</b>. Pesananmu langsung tersusun, tinggal kirim.</li>
+    </ol>
+  </section>
+
+  <section class="contact" id="kontak">
+    <div>
+      <h2>Mampir atau pesan antar</h2>
+      <p>Jl. Ps. 1 No. 80F, Tj. Sari, Kec. Medan Selayang,<br>Kota Medan, Sumatera Utara</p>
+      <div class="hero-cta">
+        <a class="btn" id="waContact" href="#" target="_blank" rel="noopener">WhatsApp</a>
+        <a class="btn ghost" href="https://instagram.com/manisanbybukmur" target="_blank" rel="noopener">Instagram</a>
+        <a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=Manisan+Buk+Mur" target="_blank" rel="noopener">Buka peta</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>© <span id="yr"></span> Manisan Buk Mur · Medan</footer>
+
+<!-- Keranjang -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="drawer" aria-hidden="true">
+  <div class="drawer-head">
+    <h3>Keranjangmu</h3>
+    <button id="closeCart" aria-label="Tutup keranjang">&times;</button>
+  </div>
+  <div class="drawer-body" id="cartItems"></div>
+  <div class="drawer-foot">
+    <label for="nama">Nama pemesan</label>
+    <input id="nama" type="text" placeholder="Nama kamu">
+    <label for="catatan">Catatan</label>
+    <textarea id="catatan" rows="2" placeholder="Contoh: pedas, tanpa cabe, ambil jam 4"></textarea>
+    <div class="total"><span>Total</span><b id="cartTotal">Rp0</b></div>
+    <button class="btn full" id="checkout">Kirim pesanan lewat WhatsApp</button>
+    <button class="link" id="clearCart">Kosongkan keranjang</button>
+  </div>
+</aside>
+
+<div class="toast" id="toast" role="status"></div>
+<script src="script.js"></script>
+</body>
+</html>
